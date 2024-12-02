@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #ff6600;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+main {
+  padding: 2em;
+}
+
+button {
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e65c00;
+}
+
+a {
+  text-decoration: none;
+  color: #ff6600;
+}
+
+.restaurants, .cart-items {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.restaurant, .cart-item {
+  border: 1px solid #ddd;
+  padding: 1em;
+  border-radius: 8px;
+  background-color: white;
+  width: 30%;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+/* Add this to your styles.css */
+.home-button, .proceed-button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.home-button:hover, .proceed-button:hover {
+  background-color: #218838;
+}
+.qr-code {
+  text-align: center;
+  margin: 20px;
+}
+
+.qr-code img {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment - Swiggy Clone</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <header>
+    <h1>Proceed to Payment</h1>
+    <a href="/" class="home-button">Home</a> <!-- Home button -->
+  </header>
+  <main>
+    <h2>Scan the QR Code to complete your payment</h2>
+    <div class="qr-code">
+      <!-- Display the pre-generated QR code image -->
+      <img src="<%= qrCodeUrl %>" alt="Payment QR Code">
+    </div>
+    <a href="/checkout">Go Back to Cart</a>
+  </main>
+</body>
+</html>

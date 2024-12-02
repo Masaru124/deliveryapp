@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Swiggy Clone</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <header>
+    <h1>Checkout</h1>
+    <a href="/" class="home-button">Home</a> <!-- Home button to navigate back to the homepage -->
+  </header>
+  <main>
+    <h2>Your Cart</h2>
+    <div class="cart-items">
+      <% cart.forEach(item => { %>
+        <div class="cart-item">
+          <img src="<%= item.image %>" alt="<%= item.name %>">
+          <h3><%= item.name %></h3>
+          <form action="/update-quantity" method="POST">
+            <input type="hidden" name="restaurantId" value="<%= item.id %>">
+            <input type="number" name="quantity" value="<%= item.quantity %>" min="1">
+            <button type="submit">Update Quantity</button>
+          </form>
+        </div>
+      <% }) %>
+    </div>
+    <a href="/proceed-to-payment" class="proceed-button">Proceed to Payment</a> <!-- Proceed to Payment button -->
+    <a href="/">Go Back</a>
+  </main>
+</body>
+</html>
