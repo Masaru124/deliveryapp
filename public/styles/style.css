@@ -1,17 +1,31 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-  background-color: #ff6600;
+  background-color: #000000;
   color: white;
-  padding: 1em;
-  text-align: center;
+  height: 50px;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+
+}
+nav ul{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-main {
-  padding: 2em;
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: white;
 }
 
 button {
@@ -20,26 +34,26 @@ button {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 button:hover {
   background-color: #e65c00;
 }
 
-a {
-  text-decoration: none;
-  color: #ff6600;
-}
-
-.restaurants, .cart-items {
+.restaurants,
+.cart-items {
+  margin-top: 100px;
   display: flex;
-  gap: 2em;
+  gap: 30px;
   flex-wrap: wrap;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.restaurant, .cart-item {
-  border: 1px solid #ddd;
-  padding: 1em;
+.restaurant,
+.cart-item {
+  
   border-radius: 8px;
   background-color: white;
   width: 30%;
@@ -47,11 +61,13 @@ a {
 }
 
 img {
-  max-width: 100%;
+  width: 300px;
+  height: 300px;
   border-radius: 8px;
 }
-/* Add this to your styles.css */
-.home-button, .proceed-button {
+
+.home-button,
+.proceed-button {
   padding: 10px 20px;
   background-color: #28a745;
   color: white;
@@ -59,9 +75,11 @@ img {
   border-radius: 5px;
 }
 
-.home-button:hover, .proceed-button:hover {
+.home-button:hover,
+.proceed-button:hover {
   background-color: #218838;
 }
+
 .qr-code {
   text-align: center;
   margin: 20px;
@@ -73,4 +91,17 @@ img {
   border: 1px solid #ccc;
   padding: 10px;
   background-color: #f9f9f9;
+}
+
+footer{
+  height: 40px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0%;
+  z-index: 1000;
+  position: fixed;
 }

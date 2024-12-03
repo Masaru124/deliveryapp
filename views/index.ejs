@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Swiggy Clone</title>
+  <title>Pizza Delivery</title>
   <link rel="stylesheet" href="/styles/style.css">
 </head>
+
 <body>
   <header>
-    <h1>Welcome to Swiggy Clone</h1>
-    <a href="/" class="home-button">Home</a> <!-- Home button to navigate back to the homepage -->
+    <nav>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="../views/login.ejs">Login</a></li>
+      </ul>
+    </nav>
   </header>
-  <main>
-    <h2>Restaurants</h2>
-    <div class="restaurants">
-      <% restaurants.forEach(restaurant => { %>
-        <div class="restaurant">
-          <img src="<%= restaurant.image %>" alt="<%= restaurant.name %>">
-          <h3><%= restaurant.name %></h3>
-          <form action="/add-to-cart" method="POST">
-            <input type="hidden" name="restaurantId" value="<%= restaurant.id %>">
-            <button type="submit">Add to Cart</button>
-          </form>
-        </div>
+
+
+
+  <div class="restaurants">
+    <% restaurants.forEach(restaurant=> { %>
+      
+      <div class="restaurant">
+        <img src="<%= restaurant.image %>" alt="<%= restaurant.name %>">
+        <h3>
+          <%= restaurant.name %>
+        </h3>
+        <form action="/add-to-cart" method="POST">
+          <input type="hidden" name="restaurantId" value="<%= restaurant.id %>">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+
       <% }) %>
-    </div>
-    <a href="/checkout">Go to Cart</a>
-  </main>
+  </div>
+  <a href="/checkout">Go to Cart</a>
+
+  <footer>
+    <p>Pizza Delivery - 2024 </p>
+  </footer>
+
+
 </body>
+
 </html>

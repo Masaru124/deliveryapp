@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - Swiggy Clone</title>
     <link rel="stylesheet" href="/styles/style.css">
 </head>
+
 <body>
     <header>
-        <h1>Register</h1>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="../views/login.ejs">Login</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <form action="/register" method="POST">
@@ -19,4 +27,5 @@
         <p>Already have an account? <a href="/login">Login here</a></p>
     </main>
 </body>
+
 </html>

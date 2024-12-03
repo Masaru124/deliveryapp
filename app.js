@@ -4,9 +4,9 @@ const bcrypt = require('bcryptjs');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const path = require('path');
-const qrcode = require('qrcode'); // Import the qrcode library
+const qrcode = require('qrcode');
 
-// Initialize the app
+
 const app = express();
 const port = 3000;
 
